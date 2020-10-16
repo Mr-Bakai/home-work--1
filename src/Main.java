@@ -9,14 +9,11 @@ public class Main {
         Warrior objectC = new Warrior(TypeOfBoost.HEAL_BOOST, new SuperAbility("punch of Bakai", 3),
                 3, 30, 400, 50);
 
+        System.out.println(objectC.getTypeOfBoost());
 
-
-        System.out.println("\n############################");
         System.out.println(objectA.getInfo());
-        System.out.println("\n############################");
-        System.out.println(objectB.getInfo());
 
-        System.out.println("\n############################");
+        System.out.println(objectB.getInfo());
 
         System.out.println(objectC.getInfo());
 
@@ -25,5 +22,13 @@ public class Main {
         objectB.makeVictorySound("HAS GONE FROM GOVERNMENT ", 5);
         objectC.makeVictorySound("TAKE SOME GOOD REST MAN!");
 
+
+        // Here is the copies
+        System.out.println("\n############################");
+        System.out.println("Copies from objectB to objectC");
+
+        objectC.copy(objectB);
+
+        System.out.println(objectC.copyInfo());
     }
 }

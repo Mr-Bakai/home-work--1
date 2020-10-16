@@ -2,6 +2,8 @@ public  class Hero extends  GameEntity{
 
     private int shield;
 
+    public Hero(){}
+
     public Hero(int shield, int health, int damage){
         super(health, damage);
         this.shield = shield;
@@ -29,6 +31,7 @@ public  class Hero extends  GameEntity{
     }
 
     public String getInfo(){
+        System.out.println("\n############################");
         return super.getInfo()  + "\nshield  = " +  shield;
     }
 }

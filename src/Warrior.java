@@ -9,9 +9,7 @@ public final class Warrior  extends  Hero {
         this.superAbility = superAbility;
         this.typeOfBoost = typeOfBoost;
         this.criticalDamage = criticalDamage;
-
     }
-
 
     public SuperAbility getSuperAbility() {
         return superAbility;
@@ -25,6 +23,18 @@ public final class Warrior  extends  Hero {
         return criticalDamage;
     }
 
+    public void setSuperAbility(SuperAbility superAbility) {
+        this.superAbility = superAbility;
+    }
+
+    public void setTypeOfBoost(TypeOfBoost typeOfBoost) {
+        this.typeOfBoost = typeOfBoost;
+    }
+
+    public void setCriticalDamage(int criticalDamage) {
+        this.criticalDamage = criticalDamage;
+    }
+
     @Override
     public String makeVictorySound(int num, String sound) {    // in order to make it changeable, you have to make it returnable in superclass
         return super.makeVictorySound(num, sound) + TypeOfBoost.AGILITY_BOOST;
@@ -36,6 +46,18 @@ public final class Warrior  extends  Hero {
                 "\nCritical damage = " + criticalDamage + getSuperAbility().superInfo();
 
     }
+
+    public void copy(Warrior x){
+        this.setSuperAbility(x.getSuperAbility());
+        this.setTypeOfBoost(x.getTypeOfBoost());
+    }
+
+    public String copyInfo(){
+        return "\nTypo of  boost " + typeOfBoost + " "+
+                "\nSuper Ability\uD83D\uDC47 " + getSuperAbility().superInfo();
+    }
+
+
 }
 
 
@@ -56,6 +78,8 @@ g)  В главном классе (Main) Создать объект класс
 
 
 На сообразительность
-h)  Написать метод в классе 3-го уровня который бы копировал некоторые свойства из себеподобного объекта
-i)  Затем скопировать несколько свойств из objectB в objectC и распечатать информацию по objectC
+h)  Написать метод в классе 3-го уровня который бы копировал
+    некоторые свойства из себеподобного объекта                                                 ✅
+i)  Затем скопировать несколько свойств из
+    objectB в objectC и распечатать информацию по objectC                                       ✅
  */

@@ -24,7 +24,7 @@ public class SuperAbility {
     }
 
     public String superInfo(){
-        return "\nname of Super ability = " + name +
-                "\namount of ability = " + amount;
+        return "\nName of Super ability = " + name +
+                "\nAmount of ability = " + amount;
     }
 }
